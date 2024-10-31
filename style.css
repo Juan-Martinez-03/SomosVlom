@@ -238,12 +238,12 @@ section {
 }
 
 /* Estilos para la sección de cards */
-.porfolio_ .h3__ {
+.porfolio_ .h2__ {
   color: #666;
   text-align: center;
   font-size: 20px;
-  margin-bottom: -50px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 10px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .wrapper {
   padding: 10px 10%;
