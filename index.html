@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar Active Link On Scroll HTML CSS JS | Codehal</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/eb496ab1a0.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="lightbox.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">
+        <img class="logo__" src="img/logovlom.png" alt="Logo VLOM" />
+      </a>
+      <nav>
+        <a href="#home" class="active">Home</a>
+        <a href="#about">Sobre nosotros</a>
+        <a href="#services">Galeria</a>
+        <a href="#portfolio">Nuestro servicio</a>
+        <a href="#contact">Preguntas</a>
+        <!-- <a href="#horario">Ubicación</a> -->
+      </nav>
+      <div class="menu-toggle"></div>
+    </header>
+    <a
+      href="https://api.whatsapp.com/send?phone=541158424835"
+      class="btn-wsp"
+      target="_blank"
+    >
+      <i class="fa fa-whatsapp icono"></i>
+    </a>
+    <main>
+      <section id="home" class="home__">
+        <img src="img/logovlom.png" alt="Logo VLOM" class="home__logo" />
+      </section>
+
+      <section class="split-screen" id="about">
+        <div class="split-content">
+          <h2>Sobre nosotros</h2>
+          <p>
+            Desde el año 2020, nos dedicamos a ofrecer servicios de limpieza de
+            excelencia en Canning, Ezeiza y zonas aledañas. Somos especialistas
+            en limpieza final de obra, y brindamos servicios de pre-limpieza y
+            limpieza profunda. Transformamos tu obra en un hogar.
+          </p>
+        </div>
+        <div class="split-image">
+          <img src="img/limpieza1.jpg" alt="Imagen de limpieza final de obra" />
+        </div>
+      </section>
+
+      <section id="services" class="__services">
+        <h2 class="h2__">trabajos finalizados</h2>
+        <div class="container__img">
+          <div class="gallery">
+            <a href="images/1.jpg" data-lightbox="models" data-title="Imagen1">
+              <img src="images/1.jpg" alt="" />
+            </a>
+            <a href="images/2.jpg" data-lightbox="models" data-title="Imagen2">
+              <img src="images/2.jpg" alt="" />
+            </a>
+            <a href="images/3.jpg" data-lightbox="models" data-title="Imagen3">
+              <img src="images/3.jpg" alt="" />
+            </a>
+            <a href="images/4.jpg" data-lightbox="models" data-title="Imagen4">
+              <img src="images/4.jpg" alt="" />
+            </a>
+            <a href="images/5.jpg" data-lightbox="models" data-title="Imagen5">
+              <img src="images/5.jpg" alt="" />
+            </a>
+            <a href="images/6.jpg" data-lightbox="models" data-title="Imagen6">
+              <img src="images/6.jpg" alt="" />
+            </a>
+            <a href="images/7.jpg" data-lightbox="models" data-title="Imagen7">
+              <img src="images/7.jpg" alt="" />
+            </a>
+            <a href="images/8.jpg" data-lightbox="models" data-title="Imagen8">
+              <img src="images/8.jpg" alt="" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección Portfolio con los cards integrados -->
+
+      <section id="portfolio" class="porfolio_">
+        <br />
+        <h2 class="h2__">Nuestros Servicios:</h2>
+        <div id="card-area">
+          <div class="wrapper">
+            <div class="box-area">
+              <div class="box">
+                <img src="img/1.jpg" alt="" />
+                <div class="overlay">
+                  <h3>LIMPIEZA FINAL DE OBRA</h3>
+                  <p>
+                    DEJAMOS TU ESPACIO LISTO PARA ESTRENAR TRANSFORMAMOS TU OBRA
+                    EN UN ESPACIO LIMPIO Y SEGURO, LISTO PARA SER HABITADO.
+                  </p>
+                </div>
+              </div>
+              <div class="box">
+                <img src="img/2.jpg" alt="" />
+                <div class="overlay">
+                  <h3>PRE LIMPIEZA</h3>
+                  <p>
+                    MEJORAMOS LOS DETALLES DURANTE LA CONTRUCCIÓN EVITAMOS QUE
+                    LOS MATERIALES SE DAÑEL POR EL POLVO Y MEJORAMOS EL
+                    RESULTADO FINAL.
+                  </p>
+                </div>
+              </div>
+              <div class="box">
+                <img src="img/3.jpg" alt="" />
+                <div class="overlay">
+                  <h3>LIMPIEZA PROFUNDA</h3>
+                  <p>
+                    DEJAMOS TU HOGAR RELUCIENTE IDEAL PARA MUDANZAS, REFORMAS O
+                    PARA RENOVAR TU ESPACIO
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="faq-section" id="faq">
+        <h2 class="h2__">Preguntas frecuentes</h2>
+        <!-- <p>
+          Encuentra respuestas a las preguntas más comunes sobre nuestros
+          servicios.
+        </p> -->
+
+        <div class="faq">
+          <div class="faq-title">
+            ¿Cómo se cotiza el servicio?<span class="icon">▼</span>
+          </div>
+          <div class="faq-content">
+            <p>
+              Para obtener un presupuesto personalizado, solicitamos fotos y
+              videos del espacio a limpiar, así como la superficie total en
+              metros cuadrados. De esta manera, podemos evaluar y brindarte un
+              presupuesto detallado
+            </p>
+          </div>
+        </div>
+
+        <div class="faq">
+          <div class="faq-title">
+            ¿Se suspende el servicio por lluvia?<span class="icon">▼</span>
+          </div>
+          <div class="faq-content">
+            <p>No, nuestros servicios no se suspenden por lluvia.</p>
+          </div>
+        </div>
+
+        <div class="faq">
+          <div class="faq-title">
+            ¿Cuánto dura la limpieza?<span class="icon">▼</span>
+          </div>
+          <div class="faq-content">
+            <p>
+              La duración de la limpieza depende del tamaño del espacio, el
+              nivel de suciedad y el tipo de servicio contratado. Generalmente,
+              una limpieza profunda puede tomar entre uno y dos días.
+            </p>
+          </div>
+        </div>
+        <div class="location-section">
+          <div class="map">
+            <p>Hubicación</p>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5542.348381848962!2d-58.506518!3d-34.849973!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd1004dc2b9f1%3A0x70a6b70caf2a30b3!2sVlom%20-%20Limpieza%20final%20de%20Obra!5e1!3m2!1ses!2sar!4v1730320887517!5m2!1ses!2sar"
+              width="100%"
+              height="100%"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div class="footer-content">
+          <div class="footer-info">
+            <p>&copy; 2024 Juan Martinez</p>
+            <p class="phone">
+              <i class="phone-icon fas fa-phone"></i> Para presupuesto:
+              1158424835
+            </p>
+            <a
+              href="https://www.instagram.com/somos.vlom/"
+              target="_blank"
+              class="instagram"
+            >
+              <i class="fab fa-instagram"></i> SOMOS VLOM
+            </a>
+          </div>
+          <nav class="footer-nav">
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">Sobre Nosotros</a></li>
+              <li><a href="#services">Servicios</a></li>
+              <li><a href="#contact">Contacto</a></li>
+            </ul>
+          </nav>
+        </div>
+      </footer>
+
+      <script src="lightbox-plus-jquery.min.js"></script>
+      <script src="main.js"></script>
+      <script src="faq.js"></script>
+    </main>
+  </body>
+</html>

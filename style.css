@@ -1,0 +1,708 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Encabezado */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+header.active {
+  background: rgba(
+    196,
+    206,
+    226,
+    0.9
+  ); /* Color de fondo cuando se hace scroll */
+  transition: background 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+.logo img {
+  height: 50px; /* Ajusta la altura según lo necesites */
+  width: auto; /* Mantiene la proporción de la imagen */
+}
+
+/* Estilos de navegación */
+nav {
+  display: flex;
+}
+
+nav a {
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+  transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: #f8d0d0;
+}
+
+/* Home Section */
+.home__ {
+  background-image: url("img/somosvlom.png");
+  background-size: cover; /* Asegura que la imagen cubra toda la sección */
+  background-position: center; /* Centra la imagen de fondo */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  min-height: 100vh; /* Asegura que la sección ocupe toda la altura de la pantalla */
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  color: #fff; /* Color del texto para asegurarse que sea visible */
+  font-size: 80px;
+  font-weight: 700;
+  text-transform: uppercase; /* Convierte el texto a mayúsculas */
+}
+
+.home__logo {
+  max-width: 400px; /* Ajusta el ancho máximo según tus necesidades */
+  width: 100%; /* Asegura que se ajuste al contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.7
+  ); /* Fondo blanco con opacidad del 70% */
+  box-shadow: 0 3px 10px rgba(133, 133, 134, 0.5); /* Sombra alrededor de la imagen */
+  border-radius: 10px; /* Esquinas redondeadas (opcional) */
+  padding: 10px; /* Espaciado interno opcional */
+}
+
+/* Pantalla Dividida - Sobre Nosotros */
+.split-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #e6e9f4;
+  padding: 50px;
+}
+
+.split-content {
+  flex: 1;
+  max-width: 50%;
+  padding-right: 20px;
+}
+
+.split-content h2 {
+  font-size: 2.5rem;
+  color: #0a1332;
+  margin-bottom: 20px;
+}
+
+.split-content p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.split-image {
+  flex: 1;
+  max-width: 50%;
+}
+
+.split-image img {
+  max-width: 100%;
+  border-radius: 50px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Sección genérica */
+section {
+  min-height: 100vh;
+
+  align-items: center;
+  background: #0550dd;
+  /* font-size: 100px;
+  color: red; */
+  font-weight: 700;
+}
+.porfolio_ {
+  background: #e6e9f4;
+}
+/* Menú hamburguesa */
+.menu-toggle {
+  display: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  position: relative;
+}
+
+.menu-toggle::before,
+.menu-toggle::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  left: 0;
+  transition: 0.5s;
+}
+
+.menu-toggle::before {
+  top: 0;
+}
+
+.menu-toggle::after {
+  bottom: 0;
+}
+
+.menu-toggle.active::before {
+  transform: rotate(45deg);
+  top: 50%;
+}
+
+.menu-toggle.active::after {
+  transform: rotate(-45deg);
+  top: 50%;
+}
+.h2__ {
+  color: #666;
+  text-align: center;
+  font-size: 35px;
+  margin-top: 50px;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* .container__img {
+  width: 100%;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 8%;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
+}
+
+.gallery img {
+  width: 100%;
+}
+.__services {
+  background: #fff;
+} */
+.container__img {
+  width: 100%; /* Asegúrate de que el contenedor ocupe todo el ancho */
+  min-height: 50vh; /* Altura mínima */
+  display: flex; /* Usa flex para centrar contenido */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  padding: 10px 8%; /* Espaciado interno */
+}
+
+.gallery {
+  display: grid; /* Usa grid para organizar las imágenes */
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(250px, 1fr)
+  ); /* Disposición inicial */
+  grid-gap: 20px; /* Espacio entre las imágenes */
+}
+
+.gallery img {
+  width: 100%; /* Asegura que las imágenes ocupen todo el ancho de su celda */
+  border-radius: 10px; /* Opcional: redondear esquinas */
+  object-fit: cover; /* Mantiene la proporción de la imagen */
+}
+
+/* Para pantallas más pequeñas */
+
+/* Para ajustar el fondo del área de servicios */
+.__services {
+  background: #fff; /* Color de fondo blanco */
+}
+
+/* Estilos para la sección de cards */
+#card-area {
+  padding: 50px 0;
+}
+.wrapper {
+  padding: 10px 10%;
+}
+.box-area {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+.box {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+}
+.box img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s;
+}
+.overlay {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(transparent, #dedcdc 58%);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  font-size: 10px;
+  transition: height 0.5s;
+}
+.overlay h3 {
+  font-weight: 500;
+  margin-bottom: 5px;
+  margin-top: 80%;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+.overlay a {
+  margin-top: 10px;
+  color: #262626;
+  text-decoration: none;
+  font-size: 14px;
+  background: #ece9e9;
+  border-radius: 50px;
+  text-align: center;
+  padding: 5px 15px;
+}
+.box:hover img {
+  transform: scale(1.1);
+}
+.box:hover .overlay {
+  height: 100%;
+}
+/* Estilos para la sección de FAQ */
+.faq-section {
+  background-color: #fff;
+  padding: 50px 10%;
+}
+
+.faq-section .h2__ {
+  color: #0a1332;
+}
+
+.faq {
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 15px 0;
+  padding: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #0a1332;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-content {
+  display: none;
+  padding-top: 10px;
+  color: #666;
+}
+
+.icon {
+  font-size: 1.2rem;
+  transition: transform 0.3s;
+}
+
+.icon.rotate {
+  transform: rotate(180deg);
+}
+
+.location-section {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+.map {
+  flex: 1; /* Ocupa la mitad del ancho */
+  max-width: 600px; /* Limita el ancho máximo */
+  height: 500px; /* Altura del mapa */
+}
+.info {
+  flex: 1; /* Ocupa la otra mitad */
+  padding: 20px;
+}
+.h2_2 {
+  margin-top: 0;
+}
+/*boton wsp*/
+.btn-wsp {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  line-height: 63px;
+  bottom: 25px;
+  right: 25px;
+  background: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 35px;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  transition: all 300ms ease;
+}
+.btn-wsp:hover {
+  background: #20ba5a;
+}
+/* Footer */
+footer {
+  background-color: #111; /* Color negro mate */
+  color: #fff; /* Texto en blanco */
+  padding: 20px 0; /* Espaciado vertical */
+  text-align: center; /* Centrar texto */
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column; /* Disposición vertical */
+  align-items: center; /* Centrar elementos horizontalmente */
+}
+
+.footer-info {
+  margin-bottom: 15px; /* Espacio debajo de la información */
+}
+
+.phone {
+  margin: 5px 0; /* Espaciado vertical */
+}
+
+.phone-icon {
+  margin-right: 5px; /* Espacio entre el icono y el texto */
+  color: #fff; /* Color blanco para el icono del teléfono */
+}
+
+.instagram {
+  color: #fff; /* Color del enlace */
+  text-decoration: none; /* Sin subrayado */
+}
+
+.instagram i {
+  margin-right: 5px; /* Espacio entre el icono y el texto */
+  color: #fff; /* Color blanco para el icono de Instagram */
+}
+
+.instagram:hover {
+  color: #f8d0d0; /* Color en hover */
+}
+
+.footer-nav {
+  margin-top: 10px; /* Espacio arriba del nav */
+}
+
+.footer-nav ul {
+  list-style: none; /* Sin viñetas */
+  padding: 0; /* Sin padding */
+}
+
+.footer-nav li {
+  display: inline; /* Elementos en línea */
+  margin: 0 10px; /* Espaciado horizontal */
+}
+
+.footer-nav a {
+  color: #fff; /* Color del enlace */
+  text-decoration: none; /* Sin subrayado */
+}
+
+.footer-nav a:hover {
+  color: #f8d0d0; /* Color en hover */
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .btn-wsp {
+    width: 63px;
+    height: 63px;
+    line-height: 66px;
+  }
+}
+/* Media Queries */
+/* Estilos para pantallas más pequeñas */
+
+.location-section {
+  width: 100%; /* Asegura que el contenedor ocupe el 100% del ancho */
+  max-width: 1000px; /* Ancho máximo del contenedor */
+  margin: 0 auto; /* Centra el contenedor */
+}
+.map {
+  width: 100%; /* El mapa ocupa el 100% del ancho del contenedor */
+  height: 500px; /* Altura del mapa */
+  font-size: 20px;
+}
+
+/* Estilos para pantallas más pequeñas */
+@media (max-width: 500px) {
+  .map {
+    height: 200px; /* Reduce la altura del mapa en pantallas pequeñas */
+  }
+}
+@media (max-width: 700px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr); /* Dos imágenes por fila */
+  }
+}
+
+/* Para pantallas de 600px o menos */
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(80px, 1fr)
+    ); /* Cambia el tamaño mínimo para más imágenes en filas */
+  }
+}
+
+/* Para ajustar el fondo del área de servicios */
+.__services {
+  background: #fff; /* Color de fondo blanco */
+}
+@media (max-width: 970px) {
+  nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    display: flex;
+    flex-direction: column;
+    background: rgba(203, 206, 212, 0.9);
+
+    overflow: hidden;
+    transition: height 0.5s ease;
+  }
+
+  nav a {
+    margin: 20px 0;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav.active {
+    height: auto;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    padding: 20px;
+  }
+
+  nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    display: flex;
+    flex-direction: column;
+    background: rgba(203, 206, 212, 0.9);
+
+    overflow: hidden;
+    transition: height 0.5s ease;
+  }
+
+  nav a {
+    margin: 20px 0;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav.active {
+    height: auto;
+  }
+
+  section {
+    font-size: 60px;
+    padding: 40px;
+    text-align: center;
+  }
+
+  /* Adaptación pantalla dividida */
+  .split-screen {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .split-content,
+  .split-image {
+    max-width: 100%;
+  }
+
+  .split-content {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 20px 120px;
+    background: rgba(90, 91, 93, 0.8);
+  }
+
+  header.active {
+    background: rgba(203, 206, 212, 0.9);
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  nav a {
+    font-size: 16px;
+  }
+
+  section {
+    font-size: 40px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .gallery {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(150px, 1fr)
+    ); /* Cambia el tamaño mínimo para más imágenes en filas */
+  }
+  header {
+    padding: 10px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  nav {
+    top: 100%;
+    left: 0;
+    height: 0;
+    display: flex;
+    flex-direction: column;
+    background: #11141a;
+    overflow: hidden;
+    transition: height 0.5s ease;
+  }
+
+  nav a {
+    margin: 10px 0;
+    font-size: 12px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav.active {
+    height: auto;
+  }
+
+  section {
+    font-size: 24px;
+    padding: 15px;
+    text-align: center;
+  }
+  .container__img {
+    width: 100%; /* Asegúrate de que el contenedor ocupe todo el ancho */
+    min-height: 50vh; /* Altura mínima */
+    display: flex; /* Usa flex para centrar contenido */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    padding: 10px 8%; /* Espaciado interno */
+  }
+
+  .gallery {
+    display: grid; /* Usa grid para organizar las imágenes */
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(250px, 1fr)
+    ); /* Asegúrate de que se ajusten en fila */
+    grid-gap: 20px; /* Espacio entre las imágenes */
+  }
+
+  .gallery img {
+    width: 100%; /* Asegura que las imágenes ocupen todo el ancho de su celda */
+    border-radius: 10px; /* Opcional: redondear esquinas */
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+  }
+
+  /* Para ajustar el fondo del área de servicios */
+  .__services {
+    background: #fff; /* Color de fondo blanco */
+  }
+}
+@media (max-width: 768px) {
+  .faq-content {
+    font-size: 1rem; /* Ajusta este valor según lo necesites */
+  }
+
+  .faq-title {
+    font-size: 1rem; /* Tamaño de la pregunta en el FAQ */
+  }
+}
+
+@media (max-width: 480px) {
+  .faq-content {
+    font-size: 0.9rem; /* Ajusta el tamaño de fuente aún más en pantallas pequeñas */
+  }
+
+  .faq-title {
+    font-size: 0.9rem; /* Tamaño de la pregunta en el FAQ en pantallas pequeñas */
+  }
+}
+/* Ajuste en pantallas medianas */
+@media (max-width: 768px) {
+  .faq-heading {
+    font-size: 1.5rem; /* Ajusta el valor según lo necesites */
+  }
+}
+
+/* Ajuste en pantallas pequeñas */
+@media (max-width: 480px) {
+  .faq-heading {
+    font-size: 1.2rem; /* Ajusta el valor según lo necesites */
+  }
+}
