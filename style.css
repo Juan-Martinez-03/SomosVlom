@@ -213,10 +213,12 @@ section {
 
 .gallery img {
   width: 100%;
-}
+}*/
 .__services {
-  background: #fff;
-} */
+  background: rgba(196, 206, 226, 0.9) !important;
+  padding: 10px;
+}
+
 .container__img {
   width: 100%; /* Asegúrate de que el contenedor ocupe todo el ancho */
   min-height: 50vh; /* Altura mínima */
@@ -234,6 +236,14 @@ section {
   ); /* Disposición inicial */
   grid-gap: 20px; /* Espacio entre las imágenes */
 }
+.overlay p {
+  font-weight: 300; /* Puedes probar con 200 o 100 para hacerlas aún más finas */
+  line-height: 1.2; /* Reduce el espacio entre líneas, prueba entre 1.1 y 1.4 */
+  letter-spacing: -0.5px; /* Espacio ligeramente reducido entre letras */
+  color: #666; /* Puedes ajustar el color según necesites */
+  font-size: 14px; /* Ajusta el tamaño de fuente según prefieras */
+  margin: 0; /* Elimina el margen para mejor control del espaciado */
+}
 
 .gallery img {
   width: 100%; /* Asegura que las imágenes ocupen todo el ancho de su celda */
@@ -244,11 +254,11 @@ section {
 /* Para pantallas más pequeñas */
 
 /* Para ajustar el fondo del área de servicios */
-.__services {
-  background: #fff; /* Color de fondo blanco */
-}
 
 /* Estilos para la sección de cards */
+.porfolio_ {
+  background-color: #fff;
+}
 .porfolio_ .h2__ {
   color: #666;
   text-align: center;
@@ -532,6 +542,9 @@ footer .nombre {
       minmax(80px, 1fr)
     ); /* Cambia el tamaño mínimo para más imágenes en filas */
   }
+  .__services {
+    margin-top: -200;
+  }
 }
 
 /* Para ajustar el fondo del área de servicios */
@@ -674,7 +687,7 @@ footer .nombre {
     height: 0;
     display: flex;
     flex-direction: column;
-    background: #11141a;
+    background: rgba(203, 206, 212, 0.9);
     overflow: hidden;
     transition: height 0.5s ease;
   }
