@@ -46,6 +46,10 @@ nav a {
   font-weight: 500;
   margin-left: 35px;
   transition: 0.3s;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 300; /* Puedes probar con 200 o 100 para hacerlas aún más finas */
+  line-height: 1.2; /* Reduce el espacio entre líneas, prueba entre 1.1 y 1.4 */
+  letter-spacing: -0.5px; /* Espacio ligeramente reducido entre letras */
 }
 
 nav a:hover,
